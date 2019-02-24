@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Event List</router-link> | 
+      <router-link :to="{ name: 'EventCreate' }">Create Event</router-link> | 
+      <router-link :to="{ name: 'User', params: { username: 'Tom' } }">User</router-link>
     </div>
     <router-view />
   </div>
 </template>
-
 <style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
